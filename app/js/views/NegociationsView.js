@@ -1,6 +1,17 @@
-class NegociationsView extends View {
-    template(model) {
-        return `
+System.register(["./index"], function (exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var index_1, NegociationsView;
+    return {
+        setters: [
+            function (index_1_1) {
+                index_1 = index_1_1;
+            }
+        ],
+        execute: function () {
+            NegociationsView = class NegociationsView extends index_1.View {
+                template(model) {
+                    return `
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
@@ -26,5 +37,9 @@ class NegociationsView extends View {
             </tfoot>
         </table>
         `;
-    }
-}
+                }
+            };
+            exports_1("NegociationsView", NegociationsView);
+        }
+    };
+});
